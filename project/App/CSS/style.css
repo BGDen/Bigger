@@ -6,7 +6,10 @@
 }
 .upElement{
   height: 300px;
-  /*margin-top: 4%;*/
   background: url(../img/kosmos.jpg) no-repeat center;
   background-size: cover;
-} 
+}
+.cenElement{
+  height: 300px;
+  background: pink;
+}
