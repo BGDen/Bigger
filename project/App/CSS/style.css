@@ -1,13 +1,18 @@
+body{
+  overflow: auto;
+}
 .upBlock{
+  overflow: auto;
   background: rgb(210, 179, 245);
 }
 .myNav{
   background: rgba(255, 255, 255, 0.411);
 }
 .upElement{
-  height: 300px;
+  width: 100vw;
+  height: 30vh;
   background: url(../img/kosmos.jpg) no-repeat center;
-  background-size: cover;
+  background-size: contain;
 }
 .cenElement{
   height: 300px;
