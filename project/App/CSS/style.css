@@ -1,20 +1,131 @@
 body{
   overflow: auto;
+  margin: 0;
+  padding: 0;
 }
-.upBlock{
-  overflow: auto;
-  background: rgb(210, 179, 245);
-}
-.myNav{
-  background: rgba(255, 255, 255, 0.411);
-}
-.upElement{
+.nav{
   width: 100vw;
   height: 30vh;
-  background: url(../img/kosmos.jpg) no-repeat center;
-  background-size: contain;
+  background: url(../img/background/tekstura.jpg) no-repeat center;
+  background-size: 100%;
+  background-clip: padding-box;
+}
+.upElement{
+  width: 97vw;
+  height: 9vh;
+  /* padding: 0 20px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items:center;
+  color: white;
+  font-size: 1.5em;
+  background: rgba(255, 255, 255, 0.26);
+}
+.face{
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 2em;
+  cursor: pointer;
+}
+.firm_text{
+  word-spacing: -2px;
+}
+.inp_text{
+  margin-left: auto;
+  font-size: .7em;
+}
+.search{
+  margin-right: 10px;
+  margin-left: 3px;
+  font-size: .7em;
 }
 .cenElement{
-  height: 300px;
-  background: pink;
+  /* height: 50em; */
+  padding: 50px 20px 50px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* padding: 5px; */
+  background: url(../img/background/steel_shavings.jpg) no-repeat center;
+  background-size: cover;
+  background-clip: padding-box;
+}
+.card{
+  width: 200px;
+  height: 365px;
+  margin: 10px;
+  /* padding-bottom: 3px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* border: 1px solid black; */
+  border-radius: 8px;
+  background: white;
+}
+.art_num{
+  width: 193px;
+  padding: 2px 0 2px 5px;
+  color: white;
+  display: flex;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  /* margin-bottom: 3px; */
+  border: 1px solid black;
+  background:url(../img/background/abstract-texture.jpg) no-repeat center;
+  background-size: cover;
+}
+.card_img{
+  width: 192px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  border-left: 4px solid rgba(128, 0, 0, 0.801);
+  border-right: 4px solid rgba(3, 20, 71, 0.767);
+}
+.img{
+  width: 140px;
+  height: 246px;
+  margin-bottom: 3px;
+  background: url(../img/Taps/doblo.jpg) no-repeat center;
+  background-size: contain;
+  background-clip: padding-box;
+  /* border: 1px solid red; */
+}
+.text_card{
+  width: 193px;
+  padding: 2px 0 2px 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  background:url(../img/background/abstract-texture.jpg) no-repeat center;
+  background-size: cover;
+}
+.to_buy{
+  width: 192px;
+  padding: 5px 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: rgba(185, 255, 194, 0.877);
+  border: 1px solid black;
+  border-top: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.add_buy, .add_info{
+  padding: 2px;
+  border-radius: 3px;
+  background: url(../img/background/metal-lines.jpg) no-repeat center;
+  background-size: cover;
+  cursor: pointer;
 }
