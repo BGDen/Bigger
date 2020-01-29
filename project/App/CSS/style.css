@@ -11,7 +11,7 @@ body{
   background-clip: padding-box;
 }
 .upElement{
-  width: 97vw;
+  /* width: 100vw; */
   height: 9vh;
   /* padding: 0 20px; */
   display: flex;
@@ -45,21 +45,61 @@ body{
   font-size: .7em;
 }
 .cenElement{
+  width: 100vw;
   /* height: 50em; */
-  padding: 50px 20px 50px 40px;
+  padding: 50px 0px 50px 0px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* padding: 5px; */
+  background: url(../img/background/metal-lines.jpg) no-repeat center;
+  background-size: cover;
+  /* background-clip: padding-box; */
+}
+.info_cont{
+  width: 30em;
+  padding: 5px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: white;
+  align-self: flex-start;
+  border-radius: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.info_company{
+  padding: 0 10px;
+  background:rgb(28, 31, 68);
+  color: white;
+  border-radius: 5%;
+}
+.info_company > p{
+  font: 1.3em sans-serif;
+}
+.card_cont{
+  width: 50em;
+  height: 750px;
+  padding: 10px 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  /* padding: 5px; */
+  /* background: rgba(255, 192, 203, 0.253); */
   background: url(../img/background/steel_shavings.jpg) no-repeat center;
   background-size: cover;
-  background-clip: padding-box;
+  border: 1px solid white;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  overflow: auto;
 }
 .card{
   width: 200px;
-  height: 365px;
+  /* height: 365px; */
   margin: 10px;
   /* padding-bottom: 3px; */
   display: flex;
@@ -116,16 +156,28 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background: rgba(185, 255, 194, 0.877);
+  background: rgb(228, 255, 77);
   border: 1px solid black;
   border-top: none;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+  box-shadow: inset 0px -5px 20px 5px rgb(255, 102, 0);
 }
 .add_buy, .add_info{
-  padding: 2px;
-  border-radius: 3px;
+  width: 5.5em;
+  height: 2em;
+  /* padding: 2px; */
+  border-radius: 1em;
   background: url(../img/background/metal-lines.jpg) no-repeat center;
   background-size: cover;
+  font-weight: bolder;
+  font-size: 1em;
   cursor: pointer;
+  outline:none;
+}
+.add_buy{
+  color: #FF4040;
+}
+.add_info{
+  color: #00cc00;
 }
