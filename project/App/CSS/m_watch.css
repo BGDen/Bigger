@@ -1,0 +1,31 @@
+.block_info_card{
+  margin-top: 3em;
+}
+.info_card_watch, .view_card_watch{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.view_card_watch{
+  width: 32.125em;
+  height: 24.094em;
+}
+.img_card_watch{
+  position: relative;
+  width: 24.094em;
+  height: 24.094em;
+  z-index: -1;
+}
+.img_brand_logo{
+  position: relative;
+  width: 3.750em;
+  height: 3.750em;
+  align-self: flex-start;
+  top: 20px;
+  left: -20px;
+  z-index: 5;
+}
+.amazfit_logo{
+  background: url(../img/TIME/watch/Brand_logo/amazfit-44485423477251_small3.jpg) no-repeat center / contain;
+}
