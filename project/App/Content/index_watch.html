@@ -26,10 +26,10 @@
     </ul>
 
     <div class="purchase_block"><!--корзина-->
-      <a href="#" class="purchase_ref">
+      <button class="purchase_btn openModal">
         <span>Purchase</span>
         <span class="img_icon"><span class="bought">0</span></span>
-      </a>
+      </button>
     </div>
 
     <div class="search_block"><!--поиск-->
@@ -80,9 +80,50 @@
 
   </main>
 
+  <div class="main_modal">   <!------------------------------- MODAL -->
+    <div class="modal">
+
+      <div class="main_title_basket">
+        <div class="top_title_basket">КОРЗИНА</div>
+        <div class="close_btn">
+          <a href="#" class="closeModal">&#x2716;</a>
+        </div>
+      </div>
+
+      <div class="basket_container">
+
+          <div class="basket_block">   <!------------------------ BASKET -->
+            <div class="view_basket">
+              <div class="img_basket amazfit"></div>
+            </div>
+            <div class="title_basket_info">
+              <div class="basket_info">Смарт-часы Samsung Galaxy Watch 46мм Silver</div>
+              <div class="basket_price">9 499 грн</div>
+            </div>
+            <div class="quantity_block">
+              <a href="#" class="minus">&minus;</a>
+              <span class="bought">0</span>
+              <a href="#" class="plus">&plus;</a>
+            </div>
+            <div class="price_block">
+              <div class="all_price">9 499 грн</div>
+            </div>
+          </div>
+
+      </div>
+
+      <div class="checkout_block"><!------------------------ CHECKOUT -->
+        <button class="checkout">Оформить заказ</button>
+      </div>
+
+    </div>
+  </div>
+
   <footer>
     <p class="copyright">© 2020 F-Shop Copyright</p>
   </footer>
+
+<script src="../JavaScript/main.js" type="module"></script>
   
 </body>
 </html>

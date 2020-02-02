@@ -34,25 +34,21 @@
   display: flex;
   margin: 0 10px 0 auto;
 }
-.purchase_block >a{
-  text-decoration: none;
-}
-.purchase_block > a>.img_icon{
+.purchase_block > .purchase_btn>.img_icon{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   width: 37px;
   height: 37px;
-  background: url(../img/TIME/icon/purchase_bag.png) no-repeat center;
-  background-size: cover;
+  background: url(../img/TIME/icon/purchase_bag.png) no-repeat center / cover;
 }
-.purchase_block >.purchase_ref{
+.purchase_block >.purchase_btn{
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.purchase_block >.purchase_ref >.img_icon >.bought{
+.purchase_block >.purchase_btn >.img_icon >.bought{
   margin-bottom: 5px;
 }
 .search_block{
