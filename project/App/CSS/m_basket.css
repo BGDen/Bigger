@@ -1,5 +1,5 @@
 /* ///////////////////////////////////////////////////////////////////  MODAL */
-.main_modal{
+.main_modal, .modal_login_container, .modal_sign_container{
   left: 0;
   top: 0;
   width: 100%;
@@ -12,7 +12,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
 }
-.modal{
+.modal, .modal_login, .modal_sign{
   width: 40em;
   display: flex;
   flex-direction: column;

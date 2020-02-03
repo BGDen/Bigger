@@ -1,1 +1,1 @@
-import {} from '../JavaScript/basket.js';
+import {} from '../JavaScript/Modal.js';

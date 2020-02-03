@@ -33,9 +33,15 @@
     </div>
 
     <div class="search_block"><!--поиск-->
-      <input type="text" class="inp_text">
+      <input type="search" results="5" autosave="some_unique_value" class="inp_text">
       <button class="search">Search</button>
     </div>
+
+    <div class="login_block"><!-----------------------------BUTTON login -->
+      <a href="#" class="button_login openModalLogin">Login</a>
+      <a href="#" class="button_login sign_up openModalSign">Sign UP</a>
+    </div>
+    
   </nav>
 
   <main>
@@ -80,7 +86,7 @@
 
   </main>
 
-  <div class="main_modal">   <!------------------------------- MODAL -->
+  <div class="main_modal">   <!----------------------------- START MODAL BASKET -->
     <div class="modal">
 
       <div class="main_title_basket">
@@ -92,7 +98,7 @@
 
       <div class="basket_container">
 
-          <div class="basket_block">   <!------------------------ BASKET -->
+          <div class="basket_block">   <!------------------------ BASKET VIEW -->
             <div class="view_basket">
               <div class="img_basket amazfit"></div>
             </div>
@@ -115,9 +121,69 @@
       <div class="checkout_block"><!------------------------ CHECKOUT -->
         <button class="checkout">Оформить заказ</button>
       </div>
-
     </div>
-  </div>
+  </div><!---------------------------------------- ----------- END MODAL BASKET -->
+
+  <div class="modal_login_container"><!---------------------- START MODAL LOGIN -->
+    <div class="modal_login">
+
+      <div class="modal_title_login">
+        <div class="modal_top_title_login">LOGIN</div>
+        <div class="modal_close_btn_log close_btn">
+          <a href="#" class="closeModal_login">&#x2716;</a>
+        </div>
+      </div>
+
+      <div class="modal_input_container">
+        <span>Email:</span>
+        <input type="email" autofocus value="@email" class="input_email"/>
+        <span>Password:</span>
+        <input type="password" maxlength="12" value="" class="input_password"/>
+        <div class="checkout_login">
+          <button class="check_log">Войти</button>
+        </div>
+        <div class="forgot">
+          <a href="#" class="forgot_info">Forgot Email / Password ?</a>
+        </div>
+      </div>
+    </div>
+  </div><!----------------------------------------------------- END MODAL LOGIN -->
+
+  <div class="modal_sign_container"><!---------------------- START MODAL SIGN UP -->
+    <div class="modal_sign">
+
+      <div class="modal_title_sign">
+        <div class="modal_top_title_sign">SIGN UP</div>
+        <div class="modal_close_btn_sign close_btn">
+          <a href="#" class="closeModal_sign">&#x2716;</a>
+        </div>
+      </div>
+
+      <div class="modal_input_container">
+
+        <span>Full Name:</span>
+        <input type="text" autofocus maxlength="12" class="input_fullname"/>
+
+        <span>Email:</span>
+        <input type="email" value="" class="input_email"/>
+
+        <!-- <span>Username:</span>
+        <input type="text" autofocus maxlength="10" class="input_username"/> -->
+
+        <span>Password:</span>
+        <input type="password" maxlength="12" value="" class="input_password"/>
+
+        <!-- <span>Repeat Password:</span>
+        <input type="password" maxlength="12" value="" class="input_repeat_password"/> -->
+
+
+        <div class="checkout_sign">
+          <button class="check_sign">Зарегестрироваться</button>
+        </div>
+      </div>
+    </div>
+  </div><!----------------------------------------------------- END MODAL SIGN UP -->
+
 
   <footer>
     <p class="copyright">© 2020 F-Shop Copyright</p>

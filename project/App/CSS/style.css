@@ -107,7 +107,7 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-.button_buy{
+.button_buy, .login_block{
   margin-left: 10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -115,7 +115,7 @@
   background: url(../img/TIME/watch/Amazfit/XIAOMI_Amazfit_Verge_Blue.jpeg) no-repeat center / cover;
 }
 
-/* ///////////////////////////////////////////////////////////////////  BUTTON */
+/* ///////////////////////////////////////////////////////////////////  BUTTON to buy */
 a.button_buy {
   position: relative;
   display: inline-block;
@@ -146,4 +146,30 @@ a.button_buy:hover {
 a.button_buy:active {
   top: 1px;
 }
-/* /////////////////////////////////////////////////////////////////// */
+
+/* ///////////////////////////////////////////////////////////////////  BUTTON login */
+a.button_login {
+  position: relative;
+  display: inline-block;
+  padding: .180em .6em;
+  line-height: 1.3em;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px #777;
+  color: rgb(0, 0, 0);
+  outline: none;
+  border: 1px solid rgb(214, 214, 214);
+  border-radius: 5px;
+  box-shadow: 0 0 0 60px rgba(0,0,0,0) inset, .1em .1em .2em rgb(121, 121, 121);
+  background: linear-gradient(rgb(255, 255, 255), rgb(204, 204, 204) 48%, rgb(180, 180, 180) 52%, rgb(136, 136, 136));
+}
+a.button_login:active {
+  top: .1em;
+  left: .1em;
+  box-shadow: 0 0 0 60px rgba(0,0,0,.05) inset;
+}
+.sign_up{
+  margin-right: 1.3em;
+}
+/*/////////////////////////////////////////////////////////////*/
