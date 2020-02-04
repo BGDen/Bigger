@@ -11,9 +11,10 @@
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.modal, .modal_login, .modal_sign{
-  width: 40em;
+.modal{
+  width: 50em;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -24,7 +25,7 @@
 }
 
 /* ///////////////////////////////////////////////////////////////////  BASKET */
-.main_title_basket{
+.main_title_basket, .modal_title_login, .modal_title_sign{
   width: 100%;
   margin: 1em 0;
   font-size: 1em;
@@ -34,16 +35,16 @@
   justify-content: space-between;
   align-items: center;
 }
-.top_title_basket{
+.top_title_basket, .modal_top_title_login, .modal_top_title_sign{
   margin-left: 1em;
 }
 .close_btn >a{
   color: #FF4040;
-  margin-right: .7em;
+  margin-right: 1em;
   text-decoration: none;
 }
 .basket_block{
-  margin-bottom: 1em;
+  margin: 0 1.2em 1em 1.2em;
   padding: .5em;
   border: 1px solid gray;
 }
@@ -57,6 +58,12 @@
   width: 4.875em;
   height: 4.875em;
   margin-right: .5em;
+}
+.title_basket_info{
+  width: 25em;
+}
+.basket_info{
+  margin-bottom: .5em;
 }
 .title_basket_info, .quantity_block{
   display: flex;
@@ -74,7 +81,10 @@
   text-decoration: none;
   margin: 0 .5em;
 }
+.price_block >.all_price{
+  padding: .1em .2em;
+}
 .checkout_block{
   align-self: flex-end;
-  margin: 0 1em 1em 0;
+  margin: 1.5em 2.85em 1.5em 0;
 }

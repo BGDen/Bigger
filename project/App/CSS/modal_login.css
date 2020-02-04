@@ -1,0 +1,42 @@
+/* ///////////////////////////////////////////////////////////////////  MODAL LOGIN / SIGN */
+.modal_login, .modal_sign{
+  width: 40em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  border-radius: .5em;
+  background: white;
+}
+.modal_input_container{
+  width: 25em;
+  display: flex;
+  margin-bottom: 2.3em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid black;
+}
+.modal_input_container > span, .input_email, .input_fullname, .input_password{
+  margin: 1.1em 0 0 1em;
+}
+.modal_input_container > span:first-child{
+  margin-top: 1.8em;
+}
+.input_email, .input_fullname, .input_password{
+  width: 18em;
+  line-height: 1.5em;
+}
+.checkout_login, .checkout_sign{
+  align-self: flex-end;
+  margin: 1.5em 1.1em 0 0;
+}
+.forgot{
+  align-self: center;
+  margin: 1.2em 0 1.3em 0;
+}
+.checkout_sign{
+  margin-bottom: 1.3em;
+}
+
