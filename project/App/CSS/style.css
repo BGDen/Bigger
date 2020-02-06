@@ -19,14 +19,20 @@
 .my_nav_li > li > a{
   text-decoration: none;
 }
-.my_nav_li :first-child>.firs_ref{
+.my_nav_li :first-child>.first_ref{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-left: 15px;
+  padding: .2em .7em;
+  font-size: larger;
+  font-weight: bolder;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(231, 21, 21);
+
 }
-.my_nav_li :first-child>.firs_ref>span{
+.my_nav_li :first-child>.first_ref>span{
   margin-left: 3px;
 }
 .purchase_block{
@@ -46,6 +52,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: .4em .5em;
 }
 .purchase_block >.purchase_btn >.img_icon >.bought{
   margin-bottom: 5px;
@@ -53,10 +60,13 @@
 .search_block{
   margin: 0 15px 0 0;
 }
+.search_block >.search{
+  padding: .4em .5em;
+}
 
 /* ///////////////////////////////////////////////////////////////////  CARD */
 .catalog{
-  margin-top: 5em;
+  margin-top: 10em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -125,10 +135,10 @@
 }
 
 /* ///////////////////////////////////////////////////////////////////  BUTTON to buy */
-a.button_buy {
+a.button_glass {
   position: relative;
   display: inline-block;
-  color: #777674;
+  color: #5a5a5a;
   font-weight: bold;
   text-decoration: none;
   text-shadow: rgba(255,255,255,.5) 1px 1px, rgba(100,100,100,.3) 3px 7px 3px;
@@ -148,11 +158,11 @@ a.button_buy {
   background-position: 200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
   box-shadow: rgba(0,0,0,.5) 3px 10px 10px -10px;
 }
-a.button_buy:hover {
+a.button_glass:hover {
   transition: .5s linear;
   background-position: -200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
 }
-a.button_buy:active {
+a.button_glass:active {
   top: 1px;
 }
 
