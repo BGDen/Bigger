@@ -85,6 +85,23 @@
   padding: .1em .2em;
 }
 .checkout_block{
-  align-self: flex-end;
-  margin: 1.5em 2.85em 1.5em 0;
+  width: 50em;
+  margin: 1em 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(180, 180, 180, 0.808) 100%);
+}
+.main_modal >.modal >.checkout_block >a.button_glass{
+  padding: .7em 1.5em;
+  margin: 0 2.8em 0 0;
+  color: rgb(44, 60, 121);
+  background-image:
+  linear-gradient(45deg, rgba(255,255,255,.0) 30%, rgba(255,255,255,.8), rgba(255,255,255,.0) 70%),
+  linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 90%, rgba(255,255,255,.3)),
+  linear-gradient(to left, rgba(125,125,125,1), rgba(255,255,255,.9) 45%, rgba(125,125,125,.5)),
+  linear-gradient(to left, rgba(125,125,125,1), rgba(255,255,255,.9) 45%, rgba(125,125,125,.5)),
+  linear-gradient(to left, rgba(223,190,170,1), rgba(255,255,255,.9) 45%, rgba(223,190,170,.5)),
+  linear-gradient(to left, rgba(223,190,170,1), rgba(255,255,255,.9) 45%, rgba(223,190,170,.5));
 }

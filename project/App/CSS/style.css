@@ -5,6 +5,7 @@
   align-items: center;
   background:rgb(196, 196, 196);
   box-shadow: 0px 15px 30px 5px rgb(196, 196, 196);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .my_nav_li{
   display: flex;
@@ -28,7 +29,7 @@
   padding: .2em .7em;
   font-size: larger;
   font-weight: bolder;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
   color: rgb(231, 21, 21);
 
 }
@@ -61,7 +62,40 @@
   margin: 0 15px 0 0;
 }
 .search_block >.search{
-  padding: .4em .5em;
+  color: rgb(76, 27, 122);
+  padding: .3em .5em;
+  font-size: large;
+  font-weight: 700;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+.login_block{
+  margin-left: 10px;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+.login_block{
+  height: 1.68em;
+  margin: 0 1.5em 0 0;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.login_block > a:first-child{
+  margin-right: .5em;
+}
+.login_block >a.button_glass{
+  padding: .5em 1em;
+  color: rgba(18, 18, 175, 0.836);
+  font-size: larger;
+
+  background-image:
+   linear-gradient(45deg, rgba(255,255,255,.0) 30%, rgba(255,255,255,.8), rgba(255,255,255,.0) 70%),
+   linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 90%, rgba(255,255,255,.3)),
+   linear-gradient(to left, rgba(125,125,125,1), rgba(255,255,255,.9) 45%, rgba(125,125,125,.5)),
+   linear-gradient(to left, rgba(125,125,125,1), rgba(255,255,255,.9) 45%, rgba(125,125,125,.5)),
+   linear-gradient(to left, rgba(223,190,170,1), rgba(255,255,255,.9) 45%, rgba(223,190,170,.5)),
+   linear-gradient(to left, rgba(223,190,170,1), rgba(255,255,255,.9) 45%, rgba(223,190,170,.5));
 }
 
 /* ///////////////////////////////////////////////////////////////////  CARD */
@@ -116,19 +150,9 @@
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-.button_buy, .login_block{
+.button_buy{
   margin-left: 10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.login_block{
-  height: 1.68em;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.login_block > a:first-child{
-  margin-right: .5em;
 }
 .amazfit{
   background: url(../img/TIME/watch/Amazfit/XIAOMI_Amazfit_Verge_Blue.jpeg) no-repeat center / cover;
@@ -165,12 +189,16 @@ a.button_glass:hover {
 a.button_glass:active {
   top: 1px;
 }
-
+.catalog_card >.btn_buy >a.button_buy{
+  color: rgb(38, 121, 38);
+  font-size: larger;
+  padding: .6em 1.6em;
+}
 /* ///////////////////////////////////////////////////////////////////  BUTTON login */
-a.button_login {
+/* a.button_login { */
   /* display: flex;
   flex-wrap: nowrap; */
-  position: relative;
+  /* position: relative;
   display: inline-block;
   padding: .180em .6em;
   line-height: 1.3em;
@@ -192,8 +220,7 @@ a.button_login:active {
 }
 .sign_up{
   margin-right: 1.3em;
-}
-
+} */
 /*/////////////////////////////////////////////////////////////*/
 footer{
   display: flex;

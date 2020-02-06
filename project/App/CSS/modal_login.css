@@ -29,8 +29,27 @@
   line-height: 1.5em;
 }
 .checkout_login, .checkout_sign{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
   align-self: flex-end;
-  margin: 1.5em 1.1em 0 0;
+  margin: 1.5em 0 0 0;
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(180, 180, 180, 0.808) 100%);
+}
+.modal_input_container >.checkout_login >a.button_glass,
+.modal_input_container >.checkout_sign >a.button_glass{
+  padding: .7em 1.2em;
+  margin: 0 1.5em 0 0;
+  color: rgb(44, 60, 121);
+  background-image:
+   linear-gradient(45deg, rgba(255,255,255,.0) 30%, rgba(255,255,255,.8), rgba(255,255,255,.0) 70%),
+   linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 90%, rgba(255,255,255,.3)),
+   linear-gradient(to left, rgba(125,125,125,1), rgba(255,255,255,.9) 45%, rgba(125,125,125,.5)),
+   linear-gradient(to left, rgba(125,125,125,1), rgba(255,255,255,.9) 45%, rgba(125,125,125,.5)),
+   linear-gradient(to left, rgba(223,190,170,1), rgba(255,255,255,.9) 45%, rgba(223,190,170,.5)),
+   linear-gradient(to left, rgba(223,190,170,1), rgba(255,255,255,.9) 45%, rgba(223,190,170,.5));
 }
 .forgot{
   align-self: center;
