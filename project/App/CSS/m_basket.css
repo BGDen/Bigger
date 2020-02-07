@@ -89,9 +89,14 @@
   margin: 1em 0;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(180, 180, 180, 0.808) 100%);
+}
+.checkout_block >.all_price_list{
+  margin: 0 0 0 2.8em;
+  padding: 0 0 0 5px;
+  border-left: 3px solid #FF4040;
 }
 .main_modal >.modal >.checkout_block >a.button_glass{
   padding: .7em 1.5em;
