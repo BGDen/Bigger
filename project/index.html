@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>F-Shop</title>
+  <link rel="icon" type="image/png" href="./App/favicon/favicon.png">
   <link rel="stylesheet" href="App/CSS/main.css">
   <!-- <script src="./App/JavaScript/Pagination.js"></script> -->
 </head>
@@ -14,22 +15,10 @@
   <nav class="my_nav">
     <ul class="my_nav_li">
         <li><a href="./index.html" class="first_ref button_glass"><img src="App/img/TIME/logo/toolkit.png" width="50px" alt="logo_F-Shop"><span>F-Shop</span></a></li>
-        <!-- <li> -->
-          <!--<select class="select"> --><!--фильтр-->
-            <!-- <option value="" hidden disabled selected>Brand</option>
-            <option value="Apple">Apple</option>
-            <option value="Samsung">Samsung</option>
-            <option value="Huawei">Huawei</option>
-            <option value="Garmin">Garmin</option>
-            <option value="Amazfit">Amazfit</option>
-          </select>
-        </li>
-        <li><a href="#">Gallery</a></li> -->
     </ul>
 
     <div class="purchase_block"><!--корзина-->
       <a href="#" class="purchase_btn openModal button_glass">
-        <!-- <span>Purchase</span> -->
         <span class="img_icon"><span class="bought">0</span></span>
       </a>
     </div>
@@ -39,33 +28,11 @@
       <a href="#" class="search button_glass">Search</a>
     </div>
 
-    <div class="login_block"><!-----------------------------BUTTON login -->
-      <a href="#" class="button_login openModalLogin button_glass">Login</a>
-      <a href="#" class="button_login sign_up openModalSign button_glass">Sign UP</a>
-    </div>
-    
   </nav>
 
   <main>
 
-    <div class="catalog">
-
-      <div class="catalog_card amazfit_card">
-        <div class="card_view">
-          <a href="./App/Content/index_watch.html">
-            <div class="card_img amazfit"></div>
-          </a>
-        </div>
-        <div class="card_info">
-          <div class="card_title">Смарт-часы Samsung Galaxy Watch 46мм Silver</div>
-          <div class="card_price">9 499 грн</div>
-        </div>
-        <div class="btn_buy">
-          <a href="#" class="button_buy button_glass">Купить</a>
-        </div>
-      </div>
-
-    </div>
+    <div id="products"></div>
 
   </main>
 
@@ -83,7 +50,7 @@
 
           <div class="basket_block">   <!------------------------ BASKET VIEW -->
             <div class="view_basket">
-              <div class="img_basket amazfit"></div>
+              <img src="./App/img/TIME/watch/Samsung/Samsung_Galaxy_Watch_46mm_Silver.jpeg" width="78px" height="78px" alt="Samsung" class="img_basket">
             </div>
             <div class="title_basket_info">
               <div class="basket_info">Смарт-часы Samsung Galaxy Watch 46мм Silver</div>
@@ -151,12 +118,8 @@
         <input type="text" autofocus maxlength="12" class="input_fullname"/>
         <span>Email:</span>
         <input type="email" value="" class="input_email"/>
-        <!-- <span>Username:</span>
-        <input type="text" autofocus maxlength="10" class="input_username"/> -->
         <span>Password:</span>
         <input type="password" maxlength="12" value="" class="input_password"/>
-        <!-- <span>Repeat Password:</span>
-        <input type="password" maxlength="12" value="" class="input_repeat_password"/> -->
         <div class="checkout_sign">
           <a href="#" class="check_sign button_glass">Зарегестрироваться</a>
         </div>
@@ -177,6 +140,9 @@
 <!-- <script src="App/JavaScript/main.js" type="module"></script> -->
 <script src="./App/JavaScript/Modal.js"></script>
 <script src="./App/JavaScript/Pagination.js"></script>
+<script src="./App/Constants/Catalog.js"></script>
+<script src="./App/Constants/root.js"></script>
+<script src="./App/Products/Products.js"></script>
 
 </body>
 </html>

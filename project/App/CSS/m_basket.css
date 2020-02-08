@@ -55,8 +55,8 @@
   align-items: center;
 }
 .img_basket{
-  width: 4.875em;
-  height: 4.875em;
+  /* width: 4.875em;
+  height: 4.875em; */
   margin-right: .5em;
 }
 .title_basket_info{

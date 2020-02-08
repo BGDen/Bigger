@@ -13,8 +13,8 @@
   height: 24.094em;
 }
 .img_card_watch{
-  width: 24.094em;
-  height: 24.094em;
+  /* width: 24.094em;
+  height: 24.094em; */
   cursor: pointer;
 }
 .img_card_watch:hover{
@@ -25,15 +25,15 @@
 }
 .img_brand_logo{
   position: relative;
-  width: 3.750em;
-  height: 3.750em;
+  /* width: 3.750em;
+  height: 3.750em; */
   align-self: flex-start;
   left: -6.5em;
   z-index: 1;
 }
-.amazfit_logo{
-  background: url(../img/TIME/watch/Brand_logo/amazfit_small.jpg) no-repeat center / contain;
-}
+/* .amazfit_logo{
+  background: url(../img/TIME/watch/Brand_logo/samsung_small.jpg) no-repeat center / contain;
+} */
 
 /* /////////////////////////////////////////////////////////////////// INFO CARD */
 .main_info_card{
@@ -91,12 +91,13 @@
   color: rgb(38, 121, 38);
 }
 .img_accessory{
-  width: 10em;
-  height: 10em;
+  /* width: 10em;
+  height: 10em; */
+  cursor: pointer;
 }
-.fitbit_blaze{
+/* .fitbit_blaze{
   background: url(../img/TIME/watch/Accessory/milanskiy-setchatyy-remeshok-dlya-chasov-fitbit-blaze-black.jpg) no-repeat center / contain;
-}
+} */
 .brand_title_accessory{
   margin-bottom: .2em;
 }
