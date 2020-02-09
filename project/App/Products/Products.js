@@ -1,7 +1,10 @@
 class Products{
+
   render(){
+    
     let htmlCatalog = '';
     CATALOG.forEach(({ id, name, price, img }) => {
+
       htmlCatalog += `
       <div class="catalog_card amazfit_card" id="${id}">
         <div class="card_view">
@@ -19,13 +22,16 @@ class Products{
       </div>
       `
     });
+
     const html = `
     <div class="catalog">
       ${htmlCatalog}
     </div>
     `;
+
     ROOT_PRODUCTS.innerHTML = html;
   }
 }
+
 const productsPage = new Products();
 productsPage.render();

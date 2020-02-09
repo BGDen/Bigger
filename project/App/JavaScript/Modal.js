@@ -1,5 +1,5 @@
 // export const
- myLink = {
+  myLink = {
   openBtn: document.querySelector('.openModal'),
   closeBtn: document.querySelector('.closeModal'),
   modal: document.querySelector('.main_modal'),
