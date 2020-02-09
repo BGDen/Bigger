@@ -2,7 +2,7 @@
   myLink = {
   openBtn: document.querySelector('.openModal'),
   closeBtn: document.querySelector('.closeModal'),
-  modal: document.querySelector('.main_modal'),
+  modal: document.querySelector('.main_modal')
 
   // openModLog: document.querySelector('.openModalLogin'),
   // closeModLog: document.querySelector('.closeModal_login'),

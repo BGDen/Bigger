@@ -1,4 +1,4 @@
-.main_modal{
+.big_info_card{
   left: 0;
   top: 0;
   width: 100%;
@@ -12,13 +12,14 @@
   z-index: 2;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.modal{
-  width: 50em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  border-radius: .5em;
-  background: white;
-}
+.modal_card{
+    /* width: 50em; */
+    padding: .1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    border-radius: .5em;
+    background: white;
+  }
