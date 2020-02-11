@@ -6,7 +6,7 @@ export class ViewShop {
       footer: document.querySelector('.foot'),
       contBasket: document.querySelector('.cont_basket'),
       contPag: document.querySelector('.cont_pag'),
-      contProd: document.querySelector('#products'),//.addEventListener('click', getData),
+      contProd: document.querySelector('#products'),
 
       contAllInf: document.querySelector('.All_info_card'),
       bigInfoCard: document.querySelector('.big_info_card'),
@@ -17,15 +17,15 @@ export class ViewShop {
       modal: document.querySelector('.big_info_card')
 
     }
-    // this.shopDomElements.contProd.addEventListener('click', getFullCard);
-    this.shopDomElements.openModalCard.addEventListener('click', ()=> shopDomElements.modal.style.display = 'flex');
+    this.getFullCard = getFullCard;
   }
-
-
+  
+  
   render(data){
     
     this.shopDomElements.contProd.innerHTML = '';
     data.forEach(({ id, name, price, img }) => {
+      this.shopDomElements.contProd.addEventListener('click', this.getFullCard);
       this.shopDomElements.contProd.innerHTML += `
       <div class="catalog_card amazfit_card" id="${id}">
         <div class="card_view">
@@ -43,8 +43,6 @@ export class ViewShop {
       </div>
       `
     });
-    //./App/Content/index_watch.html
-    // this.shopDomElements.openModalCard.addEventListener('click', ()=> this.shopDomElements.modal = 'flex');
 
   }
 

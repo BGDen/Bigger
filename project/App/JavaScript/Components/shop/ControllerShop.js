@@ -5,8 +5,9 @@ export class ControllerlShop {
   constructor (){
     this.model = new ModelShop(this.getDataCard.bind(this));
     this.view = new ViewShop(this.handlClickCard.bind(this));
-    this.getDataCard();
-    this.handlClickCard();
+    // this.getDataCard();
+    // this.handlClickCard();
+    this.model.getWatch().then(d=>this.view.renderFullCard(d));
   }
   getDataCard(){
       const data = this.model.getData();
