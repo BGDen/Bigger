@@ -17,8 +17,8 @@ export class ViewShop {
       modal: document.querySelector('.big_info_card')
 
     }
-    this.getFullCard = getFullCard;
-  }
+    // this.getFullCard = getFullCard;
+  } 
   
   
   render(data){
@@ -43,7 +43,6 @@ export class ViewShop {
       </div>
       `
     });
-
   }
 
   renderFullCard(data){
@@ -52,7 +51,7 @@ export class ViewShop {
       this.shopDomElements.bigInfoCard.innerHTML += `
       <div class="modal_card">
         <div class="main_title_basket">
-          <div class="top_title_basket">КОРЗИНА</div>
+          <div class="top_title_basket">Modal</div>
           <div class="close_btn">
             <a href="#" class="closeModal">&#x2716;</a>
           </div>
