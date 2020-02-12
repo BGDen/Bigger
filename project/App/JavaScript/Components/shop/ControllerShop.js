@@ -6,6 +6,7 @@ export class ControllerlShop {
     this.model = new ModelShop();
     this.view = new ViewShop();
     this.model.getWatch().then(d=>this.view.render(d));
+    console.log(this.model.getWatch());
   }
 
   // getDataCard(){
@@ -22,4 +23,4 @@ export class ControllerlShop {
     // this.getDataCard();//
     // this.handlClickCard();//
 //this.getDataCard.bind(this)
-// this.handlClickCard.bind(this)
+// this.handlClickCard.bind(this) 

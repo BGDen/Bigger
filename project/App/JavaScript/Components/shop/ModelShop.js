@@ -1,6 +1,7 @@
 export class ModelShop {
   constructor (data){
     this.arrCards = [];
+    this.arrCards2= [];
 
   this.getWatch();
   }
@@ -9,13 +10,30 @@ export class ModelShop {
   // }
 
   // getFullCard(){
-  //   return this.link2;
+  //   return this.link2; 
   // }
   getWatch(){
-    return fetch('./App/data/Catalog_card.json').then(response => response.json()).then(data => data);
-  }
-}
+    return fetch('./App/data/Catalog_card.json').then(response => response.json()).then(data => {const arr = data; this.data = arr; return arr;});
+     
 
+      // const arr = data.map(el => {;
+      //   const obj = {};
+      //   data.split(',').forEach(element => {
+      //     const d = element.split(':');
+      //     obj[d[0]] = d[1];
+      //   });
+      //   // console.log(obj);
+      //   return{}
+
+      // });
+      // console.log(arr);
+    
+  }
+  // arrCards = this.getWatch();
+
+}
+// arrCards = ModelShop.getWatch();
+// console.log(this.arrCards);
 
     // this.link2 = [
     //         {

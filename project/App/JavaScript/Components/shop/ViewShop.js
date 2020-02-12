@@ -17,7 +17,7 @@ export class ViewShop {
       modal: document.querySelector('.big_info_card')
 
     }
-    // this.getFullCard = getFullCard;
+    // this.getFullCard = getFullCard; 
   } 
   
   
