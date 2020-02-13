@@ -88,8 +88,8 @@ export class ViewShop {
         </div>
       </div>
       `;
-      this.shopDomElements.closeBtn.addEventListener('click', this.handleCloseModal);
-
+      
+      document.querySelector('.closeModal').addEventListener('click', this.handleCloseModal);
     }
 
     closeModalCard(){
