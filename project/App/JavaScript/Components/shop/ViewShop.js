@@ -56,7 +56,7 @@ export class ViewShop {
             <a href="#" class="closeModal">&#x2716;</a>
           </div>
         </div>
-        <div class="block_info_card" id="${id}"> 
+        <div class="block_info_card" id="full-${id}"> 
           <div class="info_card_watch">
             <div class="view_card_watch">
               <img src="${img}" width="385px" height="385px" alt="Samsung_watch" class="img_card_watch">

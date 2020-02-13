@@ -13,13 +13,15 @@ export class ControllerlShop {
   //     const data = this.model.getData();
   //     this.view.render(data);
   // }
-}
+//}
 
 
-  // handlClickCard(){
-  //   const data2 = this.model.getFullCard();
-  //   this.view.renderFullCard(data2);      
-  // } 
+   handlClickCard(ev){
+    const data2 = this.model.getWatch();
+    this.view.renderFullCard(data2);      
+   } 
+  }
+
     // this.getDataCard();//
     // this.handlClickCard();//
 //this.getDataCard.bind(this)
