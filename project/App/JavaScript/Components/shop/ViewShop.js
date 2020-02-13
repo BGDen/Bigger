@@ -1,5 +1,5 @@
 export class ViewShop {
-  constructor (getFullCard){
+  constructor (getFullCard, closeAll){
     this.shopDomElements = {
       contNav: document.querySelector('#cont_nav'),
       contMain: document.querySelector('#cont_main'),
@@ -8,21 +8,18 @@ export class ViewShop {
       contPag: document.querySelector('.cont_pag'),
       contProd: document.querySelector('#products'),
 
-      contAllInf: document.querySelector('.All_info_card'),
       bigInfoCard: document.querySelector('.big_info_card'),
 
-      
-      openModalCard: document.querySelectorAll('.open_modal_overall_card'),
-      closeBtn: document.querySelector('.closeModal'),
-      modal: document.querySelector('.big_info_card')
+      closeBtn: document.querySelector('.closeModal')
 
-    }
-    // this.getFullCard = getFullCard; 
+    };
+    
+    this.getFullCard = getFullCard; // записываем в this обрабочик клика по карточке из Conroller
+    this.closeAll =closeAll;
   } 
   
   
   render(data){
-    
     this.shopDomElements.contProd.innerHTML = '';
     data.forEach(({ id, name, price, img }) => {
       this.shopDomElements.contProd.addEventListener('click', this.getFullCard);
@@ -41,14 +38,15 @@ export class ViewShop {
           <a href="#" class="button_buy button_glass">Купить</a>
         </div>
       </div>
-      `
+      `;
     });
   }
 
   renderFullCard(data){
     this.shopDomElements.bigInfoCard.innerHTML = '';
-    data.forEach(({ id, name, price, logo, img, brand, info, accessory, acc_name, acc_price }) => {
-      this.shopDomElements.bigInfoCard.innerHTML += `
+    const { id, name, price, logo, img, brand, info, accessory, acc_name, acc_price } = data;
+    this.shopDomElements.bigInfoCard.style.display = 'flex';
+    this.shopDomElements.bigInfoCard.innerHTML += `
       <div class="modal_card">
         <div class="main_title_basket">
           <div class="top_title_basket">Modal</div>
@@ -88,9 +86,12 @@ export class ViewShop {
           </div>
         </div>
       </div>
-      `
-    });
+      `;
+    }
 
-  }
+    closeModalCard(){
+      this.shopDomElements.closeBtn.addEventListener('click', this.shopDomElements.bigInfoCard.style.display = 'none');
+    }
+
 
 } 
