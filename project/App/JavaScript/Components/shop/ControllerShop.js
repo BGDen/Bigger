@@ -6,6 +6,7 @@ export class ControllerlShop {
     this.model = new ModelShop();
     this.view = new ViewShop(this.handlClickCard.bind(this), this.handleCloseModal.bind(this));
     this.model.getWatch().then(d=>this.view.render(d));
+    
     // this.handleCloseModal();
     // console.log(this.model.getWatch());
   }

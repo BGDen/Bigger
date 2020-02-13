@@ -1,11 +1,11 @@
 export class ViewShop {
-  constructor (getFullCard, closeAll){
+  constructor (getFullCard, handleCloseModal){
     this.shopDomElements = {
-      contNav: document.querySelector('#cont_nav'),
-      contMain: document.querySelector('#cont_main'),
-      footer: document.querySelector('.foot'),
-      contBasket: document.querySelector('.cont_basket'),
-      contPag: document.querySelector('.cont_pag'),
+      // contNav: document.querySelector('#cont_nav'),
+      // contMain: document.querySelector('#cont_main'),
+      // footer: document.querySelector('.foot'),
+      // contBasket: document.querySelector('.cont_basket'),
+      // contPag: document.querySelector('.cont_pag'),
       contProd: document.querySelector('#products'),
 
       bigInfoCard: document.querySelector('.big_info_card'),
@@ -15,7 +15,8 @@ export class ViewShop {
     };
     
     this.getFullCard = getFullCard; // записываем в this обрабочик клика по карточке из Conroller
-    this.closeAll =closeAll;
+    
+    this.handleCloseModal = handleCloseModal;
   } 
   
   
@@ -87,10 +88,12 @@ export class ViewShop {
         </div>
       </div>
       `;
+      this.shopDomElements.closeBtn.addEventListener('click', this.handleCloseModal);
+
     }
 
     closeModalCard(){
-      this.shopDomElements.closeBtn.addEventListener('click', this.shopDomElements.bigInfoCard.style.display = 'none');
+       this.shopDomElements.bigInfoCard.style.display = 'none';
     }
 
 
