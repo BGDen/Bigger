@@ -1,7 +1,7 @@
 .block_info_card{
-  margin-top: 10em;
+  margin-bottom: 2.5em;
 }
-.info_card_watch, .view_card_watch, .accessory_block, .accessory_view_card{
+.block_info_card, .info_card_watch, .view_card_watch, .accessory_block, .accessory_view_card{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -16,8 +16,8 @@
 }
 .img_card_watch:hover{
   position: relative;
-  width: 30em;
-  height: 30em;
+  width: 28em;
+  height: 28em;
   transition: all .7s ease .3s;
 }
 .img_brand_logo{

@@ -1,6 +1,7 @@
 .main_info_card{
   width: 32.5em;
   display: flex;
+  margin-right: 2.5em;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -17,7 +18,7 @@
   font-weight: 700;
 }
 .specification{
-  margin: .7em 0 .5em 0;
+  margin: .7em 0 1em 0;
 }
 .info_card_watch >.main_info_card >.btn_buy{
   display: flex;

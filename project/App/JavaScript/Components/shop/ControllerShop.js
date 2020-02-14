@@ -7,8 +7,6 @@ export class ControllerlShop {
     this.view = new ViewShop(this.handlClickCard.bind(this), this.handleClickSearch.bind(this), this.handleCloseModal.bind(this));
     this.model.getWatch().then(d=>this.view.render(d));
     
-    // this.handleCloseModal();
-    // console.log(this.model.getWatch());
   }
 
   handlClickCard(ev) { // обработчик клика по карточке

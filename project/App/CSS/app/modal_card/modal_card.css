@@ -13,13 +13,13 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .modal_card{
-    /* width: 50em; */
     padding: .1em;
     display: flex;
+    margin-top: 2em;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    text-align: center;
     border-radius: .5em;
-    background: white;
+    background: rgb(255, 255, 255);
   }
+ 

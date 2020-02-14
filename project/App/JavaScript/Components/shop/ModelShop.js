@@ -15,7 +15,7 @@ export class ModelShop {
 
   getSearchedData(sValue){
     const regS = new RegExp(sValue, 'i');
-    return this.data.filter(el => regS.test(el.name)); // true / false
+    return this.arrCards.filter(el => regS.test(el.name)); // true / false
   }
 
 } 

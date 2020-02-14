@@ -1,17 +1,11 @@
 export class ViewShop {
   constructor (getFullCard, searchFunc, handleCloseModal){
+
     this.shopDomElements = {
-      // contNav: document.querySelector('#cont_nav'),
-      // contMain: document.querySelector('#cont_main'),
-      // footer: document.querySelector('.foot'),
-      // contBasket: document.querySelector('.cont_basket'),
-      // contPag: document.querySelector('.cont_pag'),
       contProd: document.querySelector('#products'),
       catCard: document.querySelector('.catalog_card'),
       bigInfoCard: document.querySelector('.big_info_card'),
-
       closeBtn: document.querySelector('.closeModal')
-
     };
     
     this.getFullCard = getFullCard; // записываем в this обрабочик клика по карточке из Conroller
@@ -20,8 +14,8 @@ export class ViewShop {
     this.inputSearch = document.querySelector('.inp-search');
     this.btnSearch = document.querySelector('.btn-search');
     this.btnSearch.addEventListener('click', searchFunc);
+
   } 
-  
   
   render(data){
     this.shopDomElements.contProd.innerHTML = '';
@@ -35,7 +29,7 @@ export class ViewShop {
         </div>
         <div class="card_info">
           <div class="card_title"><p>${name}</p></div>
-          <div class="card_price">${price}</div>
+          <div class="card_price"><p>${price}</p></div>
         </div>
         <div class="btn_buy">
           <a href="#" class="button_buy button_glass">Купить</a>
@@ -52,7 +46,6 @@ export class ViewShop {
     return this.inputSearch.value;
   }
 
-
   renderFullCard(data){
     this.shopDomElements.bigInfoCard.innerHTML = '';
     const { id, name, price, logo, img, brand, info, accessory, acc_name, acc_price } = data;
@@ -60,7 +53,7 @@ export class ViewShop {
     this.shopDomElements.bigInfoCard.innerHTML += `
       <div class="modal_card">
         <div class="main_title_basket">
-          <div class="top_title_basket">Modal</div>
+          <div class="top_title_basket">OVERALL Info</div>
           <div class="close_btn">
             <a href="#" class="closeModal">&#x2716;</a>
           </div>
@@ -68,7 +61,7 @@ export class ViewShop {
         <div class="block_info_card" id="full-${id}"> 
           <div class="info_card_watch">
             <div class="view_card_watch">
-              <img src="${img}" width="385px" height="385px" alt="Samsung_watch" class="img_card_watch">
+              <img src="${img}" width="365px" height="365px" alt="Samsung_watch" class="img_card_watch">
             </div>
             <img src="${logo}" width="60px" height="50px" alt="Samsung_logo" class="img_brand_logo">
             <div class="main_info_card">
@@ -105,6 +98,5 @@ export class ViewShop {
     closeModalCard(){
        this.shopDomElements.bigInfoCard.style.display = 'none';
     }
-
 
 } 

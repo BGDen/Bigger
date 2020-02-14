@@ -1,4 +1,4 @@
-#products, .catalog{
+#products{
   margin-top: 10em;
   display: flex;
   flex-direction: row;
@@ -6,9 +6,6 @@
   justify-content: center;
   align-items: center;
 }
-.catalog{
-  margin: 0;
-} 
 .catalog_card, .card_view, .card_info, .card_price{
   display: flex;
   flex-direction: column;

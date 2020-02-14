@@ -10,6 +10,7 @@
 }
 .top_title_basket, .modal_top_title_login, .modal_top_title_sign{
   margin-left: 1em;
+  z-index: 3;
 }
 .close_btn >a{
   color: #FF4040;
