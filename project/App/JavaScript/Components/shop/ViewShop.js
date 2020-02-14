@@ -1,5 +1,5 @@
 export class ViewShop {
-  constructor (getFullCard, handleCloseModal){
+  constructor (getFullCard, searchFunc, handleCloseModal){
     this.shopDomElements = {
       // contNav: document.querySelector('#cont_nav'),
       // contMain: document.querySelector('#cont_main'),
@@ -7,7 +7,7 @@ export class ViewShop {
       // contBasket: document.querySelector('.cont_basket'),
       // contPag: document.querySelector('.cont_pag'),
       contProd: document.querySelector('#products'),
-
+      catCard: document.querySelector('.catalog_card'),
       bigInfoCard: document.querySelector('.big_info_card'),
 
       closeBtn: document.querySelector('.closeModal')
@@ -15,15 +15,17 @@ export class ViewShop {
     };
     
     this.getFullCard = getFullCard; // записываем в this обрабочик клика по карточке из Conroller
-    
     this.handleCloseModal = handleCloseModal;
+
+    this.inputSearch = document.querySelector('.inp-search');
+    this.btnSearch = document.querySelector('.btn-search');
+    this.btnSearch.addEventListener('click', searchFunc);
   } 
   
   
   render(data){
     this.shopDomElements.contProd.innerHTML = '';
     data.forEach(({ id, name, price, img }) => {
-      this.shopDomElements.contProd.addEventListener('click', this.getFullCard);
       this.shopDomElements.contProd.innerHTML += `
       <div class="catalog_card amazfit_card" id="${id}">
         <div class="card_view">
@@ -32,7 +34,7 @@ export class ViewShop {
           </a>
         </div>
         <div class="card_info">
-          <div class="card_title">${name}</div>
+          <div class="card_title"><p>${name}</p></div>
           <div class="card_price">${price}</div>
         </div>
         <div class="btn_buy">
@@ -40,8 +42,16 @@ export class ViewShop {
         </div>
       </div>
       `;
+
+      document.querySelectorAll('.catalog_card').forEach((card) => card.addEventListener('click', this.getFullCard));
+
     });
   }
+
+  get searchValue(){
+    return this.inputSearch.value;
+  }
+
 
   renderFullCard(data){
     this.shopDomElements.bigInfoCard.innerHTML = '';

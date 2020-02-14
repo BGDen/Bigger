@@ -13,4 +13,9 @@ export class ModelShop {
     return this.arrCards.find((el) => el.id == id);
   }
 
-}
+  getSearchedData(sValue){
+    const regS = new RegExp(sValue, 'i');
+    return this.data.filter(el => regS.test(el.name)); // true / false
+  }
+
+} 
