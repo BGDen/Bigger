@@ -1,5 +1,5 @@
 export class ViewShop {
-  constructor (getFullCard, searchFunc, handleCloseModal){
+  constructor (getFullCard, searchFunc, handleCloseModal, hiPag){
 
     this.shopDomElements = {
       contProd: document.querySelector('#products'),
@@ -14,6 +14,7 @@ export class ViewShop {
     this.inputSearch = document.querySelector('.inp-search');
     this.btnSearch = document.querySelector('.btn-search');
     this.btnSearch.addEventListener('click', searchFunc);
+    this.hiPag = hiPag;
 
   } 
   
@@ -38,6 +39,8 @@ export class ViewShop {
       `;
 
       document.querySelectorAll('.catalog_card').forEach((card) => card.addEventListener('click', this.getFullCard));
+      
+      document.querySelectorAll('.page-item').forEach(el => el.addEventListener('click', this.hiPag));
 
     });
   }

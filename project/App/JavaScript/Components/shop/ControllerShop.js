@@ -4,7 +4,7 @@ import { ViewShop } from "./ViewShop.js";
 export class ControllerlShop {
   constructor (){
     this.model = new ModelShop();
-    this.view = new ViewShop(this.handlClickCard.bind(this), this.handleClickSearch.bind(this), this.handleCloseModal.bind(this));
+    this.view = new ViewShop(this.handlClickCard.bind(this), this.handleClickSearch.bind(this), this.handleCloseModal.bind(this), this.hiPag.bind(this));
     this.model.getWatch().then(d=>this.view.render(d));
     
   }
@@ -34,6 +34,10 @@ export class ControllerlShop {
     
     // эти данные передать View для рендера новых карточек
     this.view.render(searchedData);
+  }
+
+  hiPag(){
+    console.log(this.model.pag());
   }
 
 }

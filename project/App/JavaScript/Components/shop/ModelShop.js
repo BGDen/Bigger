@@ -18,4 +18,10 @@ export class ModelShop {
     return this.arrCards.filter(el => regS.test(el.name)); // true / false
   }
 
+  pag(){
+    const notesOnPage = 2;
+    const countOfItems = Math.ceil(this.arrCards.length / notesOnPage);
+    return countOfItems;
+  }
+
 } 
