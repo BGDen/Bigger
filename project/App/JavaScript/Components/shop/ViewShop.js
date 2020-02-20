@@ -1,5 +1,5 @@
 export class ViewShop {
-  constructor (getFullCard, searchFunc, handleCloseModal, hiPag){
+  constructor (getFullCard, searchFunc, handleCloseModal, handleClickPaginator){
 
     this.shopDomElements = {
       contProd: document.querySelector('#products'),
@@ -14,9 +14,12 @@ export class ViewShop {
     this.inputSearch = document.querySelector('.inp-search');
     this.btnSearch = document.querySelector('.btn-search');
     this.btnSearch.addEventListener('click', searchFunc);
-    this.hiPag = hiPag;
 
-  } 
+    // this.hiPag = hiPag;////////////////////////////////////////////
+    
+    this.pagination = document.querySelector('.pagination');
+    this.handleClickPaginator = handleClickPaginator;
+} 
   
   render(data){
     this.shopDomElements.contProd.innerHTML = '';
@@ -40,7 +43,7 @@ export class ViewShop {
 
       document.querySelectorAll('.catalog_card').forEach((card) => card.addEventListener('click', this.getFullCard));
       
-      document.querySelectorAll('.page-item').forEach(el => el.addEventListener('click', this.hiPag));
+      // document.querySelectorAll('.page-item').forEach(el => el.addEventListener('click', this.hiPag));
 
     });
   }
@@ -101,5 +104,32 @@ export class ViewShop {
     closeModalCard(){
        this.shopDomElements.bigInfoCard.style.display = 'none';
     }
+
+  //   getLink(){
+  //     return this.link;
+  // }
+
+  /////////////////////////////////////////////////////////////////////////////////////////
+
+  getLink(){
+    return this.shopDomElements.contProd;
+  }
+
+  renderPagination(len, num){
+    this.pagination.removeEventListener('click', this.handleClickPaginator);
+    
+    this.pagination.innerHTML = `
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">${num - 1}</a></li>
+    <li class="page-item active"><a class="page-link" href="#">${num}</a></li>
+    <li class="page-item"><a class="page-link" href="#">${num + 1}</a></li>
+    <li class="page-item"><a class="page-link" href="#">${Math.ceil(len / 10)}</a></li>`;
+
+    this.pagination.addEventListener('click', this.handleClickPaginator);
+  }
+
+  clearList(){
+      this.link.innerHTML = '';
+  }
 
 } 

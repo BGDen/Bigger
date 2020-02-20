@@ -18,10 +18,19 @@ export class ModelShop {
     return this.arrCards.filter(el => regS.test(el.name)); // true / false
   }
 
-  pag(){
-    const notesOnPage = 2;
-    const countOfItems = Math.ceil(this.arrCards.length / notesOnPage);
-    return countOfItems;
+///////////////////////////////////////////////////////////////////////////
+  
+  getFabric(){
+    // this.data.forEach(d => this.arrCards.push(render(d, link)));
+    return this.arrCards.length;
+  }
+
+  showList(num){
+    const len = this.arrCards.length;
+    const max = num * 10;
+    for(let i = (num - 1) * 10; i < max && i < len; i++){
+        this.arrCards[i].render();
+    }
   }
 
 } 

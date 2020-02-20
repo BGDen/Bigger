@@ -62,7 +62,7 @@ let showPage = (function() {
 		
 		let notes = users.slice(start, end);
 		
-		table.innerHTML = '';
+		table.innerHTML = '';///////////////////////////////////////
 		for (let note of notes) {
 			let tr = document.createElement('tr');
 			table.appendChild(tr);
@@ -90,7 +90,7 @@ for (let item of items) {
 	});
 }
 
-function createCell(text, tr) {
+function createCell(text, tr) {////////////////////////////////
 	let td = document.createElement('td');
 	td.innerHTML = text;
 	tr.appendChild(td);
