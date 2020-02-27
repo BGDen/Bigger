@@ -27,8 +27,8 @@ export class ModelShop {
 
   showList(num){
     const len = this.arrCards.length;
-    const max = num * 10;
-    for(let i = (num - 1) * 10; i < max && i < len; i++){
+    const max = num * 2;
+    for(let i = (num - 1) * 4; i < max && i < len; i++){
         this.arrCards[i].render();
     }
   } 
