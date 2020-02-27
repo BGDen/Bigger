@@ -15,8 +15,6 @@ export class ViewShop {
     this.btnSearch = document.querySelector('.btn-search');
     this.btnSearch.addEventListener('click', searchFunc);
 
-    // this.hiPag = hiPag;////////////////////////////////////////////
-    
     this.pagination = document.querySelector('.pagination');
     this.handleClickPaginator = handleClickPaginator;
 } 
@@ -43,8 +41,6 @@ export class ViewShop {
 
       document.querySelectorAll('.catalog_card').forEach((card) => card.addEventListener('click', this.getFullCard));
       
-      // document.querySelectorAll('.page-item').forEach(el => el.addEventListener('click', this.hiPag));
-
     });
   }
 
@@ -129,7 +125,7 @@ export class ViewShop {
   }
 
   clearList(){
-      // this.shopDomElements.contProd.innerHTML = '';
+      this.shopDomElements.contProd.innerHTML = '';
   }
 
 } 
