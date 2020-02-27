@@ -124,8 +124,8 @@ export class ViewShop {
     this.pagination.addEventListener('click', this.handleClickPaginator);
   }
 
-  clearList(){
-      this.shopDomElements.contProd.innerHTML = '';
-  }
+  // clearList(){
+  //     this.shopDomElements.contProd.innerHTML = '';
+  // }
 
 } 

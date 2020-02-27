@@ -42,7 +42,7 @@ export class ControllerlShop {
   }
 
   showList(num){
-    this.view.clearList();
+    // this.view.clearList();
     // this.model.showList(num);
     this.model.getCurrentList(num);
   }
