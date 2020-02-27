@@ -5,7 +5,7 @@ export class ControllerlShop {
   constructor (){
     this.model = new ModelShop(this.handleGetData.bind(this));
     this.view = new ViewShop(this.handlClickCard.bind(this), this.handleClickSearch.bind(this), this.handleCloseModal.bind(this), this.handleClickPaginator.bind(this));
-    this.model.getWatch().then(d=>this.view.render(d));
+    this.model.getWatch().then(d=>this.view.render(d)).then(this.handleGetData());
     
   }
 
