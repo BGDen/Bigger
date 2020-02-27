@@ -52,4 +52,4 @@ export class ControllerlShop {
     this.showList(ev.target.innerText);
   }
 
-}
+} 

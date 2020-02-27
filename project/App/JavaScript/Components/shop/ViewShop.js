@@ -28,7 +28,7 @@ export class ViewShop {
       <div class="catalog_card amazfit_card" id="${id}">
         <div class="card_view">
           <a href="#" class="open_modal_overall_card">
-            <img src="${img}" width="240px" height="240px" alt="img">
+            <img src="${img}" width="240px" height="240px" alt="${name}">
           </a>
         </div>
         <div class="card_info">
@@ -67,9 +67,9 @@ export class ViewShop {
         <div class="block_info_card" id="full-${id}"> 
           <div class="info_card_watch">
             <div class="view_card_watch">
-              <img src="${img}" width="365px" height="365px" alt="Samsung_watch" class="img_card_watch">
+              <img src="${img}" width="365px" height="365px" alt="${brand}" class="img_card_watch">
             </div>
-            <img src="${logo}" width="60px" height="50px" alt="Samsung_logo" class="img_brand_logo">
+            <img src="${logo}" width="60px" height="50px" alt="${brand}" class="img_brand_logo">
             <div class="main_info_card">
               <div class="brand_title">${name}</div>
               <div class="brand_price_model">${price}</div>

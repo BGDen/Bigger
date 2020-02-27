@@ -31,6 +31,6 @@ export class ModelShop {
     for(let i = (num - 1) * 10; i < max && i < len; i++){
         this.arrCards[i].render();
     }
-  }
+  } 
 
 } 
