@@ -1,7 +1,7 @@
 export class ModelShop {
   constructor (data){
     this.arrCards = [];
-  }
+                                    }
 
   getWatch(){
     return fetch('./App/data/Catalog_card.json')
