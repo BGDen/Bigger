@@ -1,7 +1,6 @@
 export class ModelShop {
   constructor (data){
     this.arrCards = [];
-    // this.getCurrentList();
   }
 
   getWatch(){
@@ -9,8 +8,21 @@ export class ModelShop {
     .then((response) => response.json())
     .then((data) => {
       this.arrCards = data;
-      return this.getCurrentList(1);
+      return this.getCurrentList(0);
     });
+  }
+
+  getCurrentList(num){
+    let currentArrCards = [],
+        fromCard = num * 1,
+        toCard = fromCard + 2;
+        for(let i = fromCard; i < toCard; i++){
+          if(this.arrCards[i] !== undefined){
+            currentArrCards.push(this.arrCards[i]);
+          }else{i = toCard;}
+        }
+        console.log(currentArrCards);
+        return currentArrCards;
   }
 
   getFullCard(id){ // находим нужные часы по id
@@ -28,21 +40,4 @@ export class ModelShop {
     return this.arrCards.length;
   }
 
-  // showList(num){
-  //   const len = this.arrCards.length;
-  //   const max = num * 2;
-  //   for(let i = (num - 1) * 4; i < max && i < len; i++){
-  //       this.arrCards[i].render();
-  //   }
-  // } 
-
-  getCurrentList(num){
-    let currentArrCards = [],
-        fromCard = num * 1,
-        toCard = (num * 1) + 1;
-        for(let i = (fromCard - 1); i < toCard; i++){
-          currentArrCards.push(this.arrCards[i]);
-        }
-        return currentArrCards;
-      }
 }

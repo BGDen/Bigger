@@ -6,7 +6,6 @@ export class ControllerlShop {
     this.model = new ModelShop(this.handleGetData.bind(this));
     this.view = new ViewShop(this.handlClickCard.bind(this), this.handleClickSearch.bind(this), this.handleCloseModal.bind(this), this.handleClickPaginator.bind(this));
     this.model.getWatch().then(d=>this.view.render(d)).then(this.handleGetData());
-    
   }
 
   handlClickCard(ev) { // обработчик клика по карточке
@@ -36,21 +35,18 @@ export class ControllerlShop {
 ////////////////////////////////////////////////////////////////////////////////////////
 
   handleGetData(){
-    this.len = this.model.getFabric(this.view.getLink());
-    this.view.renderPagination(this.len, 1);
-    // this.showList(1);
+    this.len = this.model.getFabric();
+    this.view.renderPagination(this.len, 0);
+    this.showList(0);
   }
 
   showList(num){
-    // this.view.clearList();
-    // this.model.showList(num);
-    this.model.getCurrentList(num);
+    this.view.render(this.model.getCurrentList(num))
   }
 
   handleClickPaginator(ev){
-    console.log(ev.target.innerText);
     this.view.renderPagination(this.len, Number(ev.target.innerText));
-    // this.showList(ev.target.innerText);
+    this.showList(ev.target.innerText);
   }
 
 }
