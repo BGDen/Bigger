@@ -1,7 +1,8 @@
 export class ModelShop {
   constructor (data){
     this.arrCards = [];
-                                    }
+    this.lastPage;
+  }
 
   getWatch(){
     return fetch('./App/data/Catalog_card.json')
@@ -21,6 +22,7 @@ export class ModelShop {
             currentArrCards.push(this.arrCards[i]);
           }else{i = toCard;}
         }
+        this.lastPage = Math.ceil(this.getFabric() / toCard);
         console.log(currentArrCards);
         return currentArrCards;
   }

@@ -107,16 +107,28 @@ export class ViewShop {
     return this.shopDomElements.contProd;
   }
 
-  renderPagination(len, num){
-    console.log(len,num);
+  renderPagination(len, num, lastPage){
+    console.log(len,num, lastPage);
     this.pagination.removeEventListener('click', this.handleClickPaginator);
-    
+
+    if(num == 1){
     this.pagination.innerHTML = `
+      <li class="page-item"><a class="page-link button_glass" href="#">${num}</a></li>
+      <li class="page-item"><a class="page-link button_glass" href="#">${num + 1}</a></li>
+      <li class="page-item"><a class="page-link button_glass" href="#">${num + 2}</a></li>`
+    }else if(num == lastPage){
+      this.pagination.innerHTML = `
+      <li class="page-item"><a class="page-link button_glass" href="#">${num - 2}</a></li>
+      <li class="page-item"><a class="page-link button_glass" href="#">${num - 1}</a></li>
+      <li class="page-item"><a class="page-link button_glass" href="#">${num}</a></li>`
+    }else if(num > 1 && num < lastPage){
+      this.pagination.innerHTML = `
       <li class="page-item"><a class="page-link button_glass" href="#">${num - 1}</a></li>
       <li class="page-item"><a class="page-link button_glass" href="#">${num}</a></li>
-      <li class="page-item"><a class="page-link button_glass" href="#">${num + 1}</a></li>`;
+      <li class="page-item"><a class="page-link button_glass" href="#">${num + 1}</a></li>`
+    };
 
     this.pagination.addEventListener('click', this.handleClickPaginator);
   }
 
-} 
+}

@@ -45,7 +45,7 @@ export class ControllerlShop {
   }
 
   handleClickPaginator(ev){
-    this.view.renderPagination(this.len, Number(ev.target.innerText));
+    this.view.renderPagination(this.len, Number(ev.target.innerText), this.lastPage);
     this.showList(ev.target.innerText);
   }
 
